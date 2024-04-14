@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: rgb(237, 236, 236);
+    font-size: 1.8rem;
+}
+
+.dropdown.active>.link,
+.link:hover {
+    color: black;
+}
+
+header button {
+    font: inherit;
+    color: grey;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+header a {
+    font: inherit;
+    color: grey;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    font: inherit;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0.5rem);
+    background-color: white;
+    border-radius: o.25rem;
+    padding: 0.75rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.dropdown.active>.link+.dropdown-menu {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.information-grid {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 2rem;
+}
+
+.dropdown-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 1.5rem;
+}
+
+.login-form {
+    font-size: 1.5rem;
+}
+
+.login-form input{
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+}
+
+.submit-btn{
+    outline-color: black;
+    width: 100%;
+    border: 1px solid black ;
+}
